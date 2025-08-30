@@ -1,6 +1,10 @@
 import { LitElement, html, css } from 'lit';
 
 export class TituloH1 extends LitElement {
+    static properties = {
+        texto: { type: String }
+    }
+
     static styles = css`
         h1 {
             color: red;
@@ -8,9 +12,11 @@ export class TituloH1 extends LitElement {
         }
     `;
 
+    textoInicial = 'Texto Inicial!';
+
     render() {
         return html`
-            <h1> Wola, Mundo </h1> 
+            <h1>${this.texto}</h1> 
         `;
     }
 }

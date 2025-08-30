@@ -14,7 +14,7 @@ export class PNombre extends LitElement {
 
     constructor() {
         super();
-        this.nombre = 'Gato';
+        this.nombre = 'desde padre';
     }
 
     connectedCallback() {
@@ -28,14 +28,14 @@ export class PNombre extends LitElement {
 
     render() {
         return html`
-            <p>Hola, mi nombre es: ${this.nombre}</p>
+            <p>Hola,: ${this.nombre}</p>
         `;
     }
 
     updated(cambios) {
         console.log(`updated`);
         if (cambios.has('nombre')) {
-            console.log(`se cambio nombre`);
+            console.log(`se cambio nombre en p-nnombre`);
         }
     }
 
